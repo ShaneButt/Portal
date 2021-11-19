@@ -1,0 +1,6 @@
+{
+	"name": "portal",
+	"tree": {
+		"$path": "src"
+	}
+}

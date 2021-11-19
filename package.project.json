@@ -1,0 +1,16 @@
+{
+	"name": "portal",
+	"tree": {
+	  "$className": "DataModel",
+  
+	  "ReplicatedStorage": {
+		  "$className": "ReplicatedStorage",
+		  "Packages": {
+			  "$path": "Packages",
+			  "Portal": {
+				  "$path": "src"			  
+		  		}
+			}
+	  	}
+	}
+}
