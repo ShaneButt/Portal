@@ -1,67 +1,54 @@
 local t = require(script.Parent.Parent.Parent.t)
 
-local ContextBlock: (obj: any) -> boolean = require(script.Parent.ContextBlock)
-local ISubscription: (obj: any) -> boolean = require(script.Parent.ISubscription)
-local IContext: (obj: any) -> boolean = require(script.Parent.IContext)
-local IParticle: (obj: any) -> boolean = require(script.Parent.IParticle)
+local ISubscription: (obj: any) -> (boolean, string?) = require(script.Parent.ISubscription)
+local IContext: (obj: any) -> (boolean, string?) = require(script.Parent.IContext)
+local IParticle: (obj: any) -> (boolean, string?) = require(script.Parent.IParticle)
 
-type ContextBlock = ContextBlock.ContextBlock
 type ISubscription = ISubscription.ISubscription
 type IContext = IContext.IContext
 type IParticle = IParticle.IParticle
 
-local isWormhole: (obj: any) -> boolean = t.interface({
+local likeWormhole: (obj: any) -> (boolean, string?) = t.interface({
 	_Storage = t.instanceIsA("Folder"),
-	_Contexts = t.map(t.string, t.any)
+	_Contexts = t.map(t.string, IContext),
+	Middleware = t.interface({}),
 })
-
+--[=[
+	@interface IWormhole
+	@within Portal
+	._Storage Folder -- The storage folder for Portal's RemoteEvents.
+	._Contexts {[string]: IContext} -- The Context managed by this Wormhole.
+	.Middleware any -- The Middleware pipeline of this Wormhole.
+]=]
 export type IWormhole = {
 	_Storage: Folder,
-	_Contexts: {[string]: ContextBlock},
+	_Contexts: { [string]: IContext },
+	Middleware: { string },
 
 	__index: IWormhole,
 
-	new: () -> IWormhole,
-	is: (obj: any) -> boolean,
+	new: (middlewarre: any) -> IWormhole,
+	like: (obj: any) -> (boolean, string?),
 
-	awaitContext: (
-		wormhole: IWormhole,
-		context: string, 
-		timeout: number?
-	) -> ContextBlock,
-	
-	addContext: (
-		wormhole: IWormhole,
-		context: string
-	) -> ContextBlock,
-	
+	addContext: (wormhole: IWormhole, context: string) -> IContext,
+
 	makeSubscription: (
-		wormhole: IWormhole,
 		context: string,
-		action: string
+		action: string,
+		callback: (particle: IParticle, sender: Player?) -> nil?
 	) -> ISubscription,
 
-	doSubscribe: (
+	subscribe: (
 		wormhole: IWormhole,
-		subscription: ISubscription, 
-		callback: () -> nil
+		subscription: ISubscription,
+		callback: (particle: IParticle, sender: Player?) -> nil
 	) -> () -> nil,
 
-	applyMiddleware: (
-		wormhole: IWormhole,
-		portal: {string},
-		data: any
-	) -> IParticle,
+	applyMiddleware: (wormhole: IWormhole, portal: { [string]: string }, data: any) -> IParticle,
 
-	publishMessage: (
-		wormhole: IWormhole,
-		context: string, 
-		action: string, 
-		data: any, 
-		to: Player?
-	) -> nil
+	dispatch: (wormhole: IWormhole, context: IContext, action: string, data: any, sender: Player?) -> nil,
 }
 
-return function(obj)
-	return isWormhole(obj) :: boolean
+return function(obj): (boolean, string?)
+	return likeWormhole(obj)
 end

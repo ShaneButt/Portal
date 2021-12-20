@@ -1,28 +1,27 @@
 local t = require(script.Parent.Parent.Parent.t)
 
-local function isDateTime(value: any): (boolean, string?)
-	local valueType = typeof(value)
-	if valueType == "DateTime" then
-		return true
-	else
-		return false, string.format("DateTime expected, got %s", valueType)
-	end
-end
-
-local isParticle: (obj: any) -> boolean = t.interface({
+local likeParticle: (obj: any) -> (boolean, string?) = t.interface({
 	Context = t.string,
 	Action = t.string,
-	DateTime = isDateTime,
+	Timestamp = t.DateTime,
 	Payload = t.map(t.string, t.any),
 })
 
+--[=[
+	@interface IParticle
+	@within Portal
+	.Context string -- The Context this Particle was sent to.
+	.Action string -- The Action this Particle was sent to.
+	.Timestamp DateTime -- The Timestamp this Particle was sent at.
+	.Payload {[string]: any} -- The Payload belonging to this Particle.
+]=]
 export type IParticle = {
 	Context: string,
 	Action: string,
 	Timestamp: DateTime,
-	Payload: { [string]: any },
+	Payload: any,
 }
 
-return function(obj: any): boolean
-	return isParticle(obj)
+return function(obj: { [string]: any }): (boolean, string?)
+	return likeParticle(obj)
 end

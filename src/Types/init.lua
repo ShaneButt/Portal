@@ -1,21 +1,26 @@
-local IContext: (obj: any) -> boolean = require(script.IContext)
-local ISubscription: (obj: any) -> boolean = require(script.ISubscription)
-local IWormhole: (obj: any) -> boolean = require(script.IWormhole)
-local ContextBlock: (obj: any) -> boolean = require(script.ContextBlock)
-local IParticle: (obj: any) -> boolean = require(script.IParticle)
+local Ancestor = script.Parent.Parent
+local t: { [string]: any } = require(Ancestor:FindFirstChild("t"))
 
-export type IContext = IContext.IContext
-export type ISubscription = ISubscription.ISubscription
-export type IWormhole = IWormhole.IWormhole
-export type ContextBlock = ContextBlock.ContextBlock
-export type IParticle = IPackage.IParticle
+local ContextCheck: (obj: any) -> (boolean, string?) = require(script.IContext)
+local SubscriptionCheck: (obj: any) -> (boolean, string?) = require(script.ISubscription)
+local WormholeCheck: (obj: any) -> (boolean, string?) = require(script.IWormhole)
+local ParticleCheck: (obj: any) -> (boolean, string?) = require(script.IParticle)
 
-local Checks: { [string]: (obj: any) -> boolean } = {
-	["isContext"] = IContext,
-	["isSubscription"] = ISubscription,
-	["isWormhole"] = IWormhole,
-	["isContextBlock"] = ContextBlock,
-	["isParticle"] = IParticle,
+export type IContext = ContextCheck.IContext
+export type ISubscription = SubscriptionCheck.ISubscription
+export type IWormhole = WormholeCheck.IWormhole
+export type IParticle = ParticleCheck.IParticle
+
+local Checks: { [string]: (obj: any) -> (boolean, string?) } = {
+	["IContext"] = ContextCheck,
+	["ISubscription"] = SubscriptionCheck,
+	["IWormhole"] = WormholeCheck,
+	["IParticle"] = ParticleCheck,
 }
 
-return Checks
+local Types = {
+	t = t,
+	like = Checks,
+}
+
+return Types
