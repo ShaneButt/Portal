@@ -1,0 +1,30 @@
+title = "Portal"
+
+gitSourceBranch = "main"
+
+changelog = true
+
+[[classOrder]]
+section = "Core"
+classes = ["Portal", "Wormhole", "Context", "Subscription"]
+
+[[classOrder]]
+classes = ["Middleware"]
+
+[home]
+enabled = true
+
+[[home.features]]
+title = "Networking made simple!"
+description = "Portal makes working with RemoteEvents simple and easy to think about. Navigating to your remotes is a thing of the past, let Portal handle that for you. Portal allows you to get down to what matters: the logic."
+image = ""
+
+[[home.features]]
+title = "Fully Typed with Runtime Typechecking"
+description = "Portal has full type coverage and includes runtime type-checking to ensure usage of Portal is correct and eventually will include type-checking middleware to strictly type Context-Action parameters."
+image = ""
+
+[[home.features]]
+title = "Adaptable with middleware"
+description = "Portal does more than simply handle the network business logic of your game, you can write custom middleware, or use a variety of the middleware pre-packaged with Portal, to manipulate and act upon the data that gets sent, handling specific actions, streams of data, and more!"
+image = ""
