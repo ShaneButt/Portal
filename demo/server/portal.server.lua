@@ -15,6 +15,6 @@ local subscription = Portal:Subscription(ClientContext.Name, "Loaded", function(
 	local f = "[Server][Client-Loaded]: Player [%s] has loaded, client pinged with (%s)"
 	local pong = particle.Payload.Ping
 
-	--print(f:format(client.Name, pong))
+	print(f:format(client.Name, pong))
 end)
 local subscriber = Portal:Subscribe(subscription)
