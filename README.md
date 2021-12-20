@@ -1,33 +1,52 @@
-# portal
-Built with [Rojo](https://github.com/rojo-rbx/rojo) 7.0.0-rc.1.
+# Portal
+Built with [Rojo](https://github.com/rojo-rbx/rojo) 7.0.0.
 
-Portal is a Networking frameworking implementing a Publisher-Subscriber model. It aims to stand next to notable frameworks such as Postal.js. It also takes inspiration from a alternative implementation of Postal written in Lua, [Ropost]()
+A typed Luau publish-subscribe networking framework based on [postal.js](https://github.com/postaljs/postal.js) and inspired by [Sayhisam's Ropost](https://github.com/sayhisam1/Ropost) which is an alternative to this package.
 
-Portal aims to make Networking simple by providing two core methods:
+A publish-subscribe model was chosen to simplify and make client-server communication less bothersome, simply subscribe to actions and publish data to them!
+
+Portal is designed on Contexts and Actions rather than Channels and Topics; functionally they're identical, but in my opinion, more accurately named, specifically for Roblox.
+
+
+
+# API Usage
+Portal aims to make Networking simple by providing two core methods and is based on the postal.js package, which means you can check their documentation as well as Portal's!
+
+You can subscribe to a Context-Action in the following manner, you should use the returned function to completely disconnect the subscription:
 ```lua
-Portal:Subscribe(context: string, action, string, callback: () -> ()): () -> ()
-Portal:Publish(context: string, action: string, data: any): () -> ()
+Portal:Subscribe(
+	context: string, 
+	action: string, 
+	callback: (particle: IParticle, sender: Player?) -> nil
+): () -> nil
 ```
 
-You can create contexts like so:
+To send data through Portal, you should use the `:Publish` method, like so:
 ```lua
-Portal:Context(context: string)
+Portal:Publish(context: string, action: string, data: any): nil
+```
+
+You can also create or retrieve a Context to perform operations on:
+```lua
+Portal:Context(context: string): IContext
 ```
 
 You can create subscriptions, like so:
 ```lua
-local listener = Portal:Subscription()
+local subscription = Portal:Subscription(
+	context: string, 
+	action: string, 
+	callback: (particle: IParticle, sender: Player?) -> nil?
+): ISubscription
 ```
 
-## Getting Started
+## Build Project
 To build the place from scratch, use:
-
 ```bash
 rojo build -o bin/portal.rbxlx targets/place.project.json
 ```
 
 Next, open `bin/portal.rbxlx` in Roblox Studio (`start bin/portal.rbxlx` could work) and start the Rojo server:
-
 ```bash
 rojo serve
 ```
