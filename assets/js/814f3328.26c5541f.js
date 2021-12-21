@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[535],{45641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Portal Release!","permalink":"/Portal/blog/2021/12/20/portal-release"},{"title":"Type Improvements!","permalink":"/Portal/blog/2021/12/10/type-coverage-improvements"}]}')}}]);

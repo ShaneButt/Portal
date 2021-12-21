@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-beta.9">
+<link rel="alternate" type="application/rss+xml" href="/Portal/blog/rss.xml" title="Portal RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Portal/blog/atom.xml" title="Portal Atom Feed"><title data-react-helmet="true">Portal | Portal</title><meta data-react-helmet="true" property="og:title" content="Portal | Portal"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="description" content="Portal is the gateway into the framework, it&#x27;s all you could need to use. The whole framework is exposed and documented such that developers can extend the functionality of Portal through middleware, or even also perhaps to help maintain the project in the future."><meta data-react-helmet="true" property="og:description" content="Portal is the gateway into the framework, it&#x27;s all you could need to use. The whole framework is exposed and documented such that developers can extend the functionality of Portal through middleware, or even also perhaps to help maintain the project in the future."><meta data-react-helmet="true" property="og:url" content="https://ShaneButt.github.io/Portal/api/Portal"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_tag" content="default"><link data-react-helmet="true" rel="canonical" href="https://ShaneButt.github.io/Portal/api/Portal"><link data-react-helmet="true" rel="alternate" href="https://ShaneButt.github.io/Portal/api/Portal" hreflang="en"><link data-react-helmet="true" rel="alternate" href="https://ShaneButt.github.io/Portal/api/Portal" hreflang="x-default"><link rel="stylesheet" href="/Portal/assets/css/styles.04fec1dc.css">
+<link rel="preload" href="/Portal/assets/js/runtime~main.d79643e9.js" as="script">
+<link rel="preload" href="/Portal/assets/js/main.363356a8.js" as="script">
+</head>
+<body>
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div><a href="#" class="skipToContent_1oUP">Skip to main content</a></div><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Navigation bar toggle" class="navbar__toggle clean-btn" type="button" tabindex="0"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Portal/"><b class="navbar__title">Portal</b></a><a class="navbar__item navbar__link" href="/Portal/docs/intro">Docs</a><a class="navbar__item navbar__link" href="/Portal/blog">Blog</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Portal/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://www.github.com/ShaneButt/Portal" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link"><span>GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a><div class="toggle_71bT toggle_3Zt9 toggleDisabled_3cF-"><div class="toggleTrack_32Fl" role="button" tabindex="-1"><div class="toggleTrackCheck_3lV7"><span class="toggleIcon_O4iE">🌜</span></div><div class="toggleTrackX_S2yS"><span class="toggleIcon_O4iE">🌞</span></div><div class="toggleTrackThumb_xI_Z"></div></div><input type="checkbox" class="toggleScreenReader_28Tw" aria-label="Switch between dark and light mode"></div><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div class="main-wrapper docPageContainer_2Kz0"><div class="docPage_1bdk"><div class="docSidebarContainer_1ykS"><div class="sidebar_15mo"><nav class="menu thin-scrollbar menu_Bmed"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><a class="menu__link menu__link--sublist menu__link--active" href="#">Core</a><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Portal/api/Portal">​Portal</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Portal/api/Wormhole">​Wormhole</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Portal/api/Context">​Context</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Portal/api/Subscription">​Subscription</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Portal/api/Middleware">​Middleware</a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_1CGd"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_3E-R"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div><main class="docMainContainer_28N5"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_3WPG"><div class="docItemContainer_3XDu"><article><div class="member_qHIL markdown"><div class="tocCollapsible_1PrD theme-doc-toc-mobile tocMobile_3ryM"><button type="button" class="clean-btn tocCollapsibleButton_2O1e">On this page</button></div><header><h1 class="docTitle_1ddc" style="text-decoration:none"><span style="display:inline-block">Portal</span></h1><div class="luaClassTags_2Zrs"></div><div>
+<p>Portal is the gateway into the framework, it's all you could need to use. The whole framework is exposed and documented such that developers can extend the functionality of Portal through middleware, or even also perhaps to help maintain the project in the future.</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_31ik" id="types">Types<a aria-hidden="true" class="hash-link" href="#types" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="IContext"><code style="text-decoration:none">IContext</code><a aria-hidden="true" class="hash-link" href="#IContext" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Types/IContext.lua#L23"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code class="purple__nFc">interface</code> <code>IContext<!-- --> <!-- -->{</code><div class="inset_2cJr"><div><code>Name<!-- -->: </code><code class="blue_2Afy">string</code><span class="inlineDescription_17uy">-- <span>
+<p>The Name of the Context.</p>
+</span></span></div><div><code>Remote<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/RemoteEvent" target="_blank" rel="noopener noreferrer">RemoteEvent<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_17uy">-- <span>
+<p>The RemoteEvent this Context owns.</p>
+</span></span></div><div><code>Actions<!-- -->: </code><code class="op_1JtD">{</code><code class="blue_2Afy">string</code><code class="op_1JtD">}</code><span class="inlineDescription_17uy">-- <span>
+<p>A list of actions that belong to this Context.</p>
+</span></span></div><div><code>Subscriptions<!-- -->: </code><code class="op_1JtD">{</code><span><code>[</code><code class="purple__nFc">(</code><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="purple__nFc">(</code><code class="purple__nFc">)</code><code>]</code></span><code>: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#ISubscription">ISubscription</a></code><code class="op_1JtD">}</code><span class="inlineDescription_17uy">-- <span>
+<p>A dictionary of unsubscriber function for the keys and their associated Subscriptions as values.</p>
+</span></span></div></div><code>}</code></div><div></div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="IParticle"><code style="text-decoration:none">IParticle</code><a aria-hidden="true" class="hash-link" href="#IParticle" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Types/IParticle.lua#L18"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code class="purple__nFc">interface</code> <code>IParticle<!-- --> <!-- -->{</code><div class="inset_2cJr"><div><code>Context<!-- -->: </code><code class="blue_2Afy">string</code><span class="inlineDescription_17uy">-- <span>
+<p>The Context this Particle was sent to.</p>
+</span></span></div><div><code>Action<!-- -->: </code><code class="blue_2Afy">string</code><span class="inlineDescription_17uy">-- <span>
+<p>The Action this Particle was sent to.</p>
+</span></span></div><div><code>Timestamp<!-- -->: </code><code class="blue_2Afy">DateTime</code><span class="inlineDescription_17uy">-- <span>
+<p>The Timestamp this Particle was sent at.</p>
+</span></span></div><div><code>Payload<!-- -->: </code><code class="op_1JtD">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="op_1JtD">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The Payload belonging to this Particle.</p>
+</span></span></div></div><code>}</code></div><div></div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="ISubscription"><code style="text-decoration:none">ISubscription</code><a aria-hidden="true" class="hash-link" href="#ISubscription" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Types/ISubscription.lua#L19"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code class="purple__nFc">interface</code> <code>ISubscription<!-- --> <!-- -->{</code><div class="inset_2cJr"><div><code>Context<!-- -->: </code><code class="blue_2Afy">string</code><span class="inlineDescription_17uy">-- <span>
+<p>The name of the context this subscription is for.</p>
+</span></span></div><div><code>Action<!-- -->: </code><code class="blue_2Afy">string</code><span class="inlineDescription_17uy">-- <span>
+<p>The name of the action this subscription is listening to.</p>
+</span></span></div><div><code>Callback<!-- -->: </code><code class="green_3LnD">(</code><div class="inset_2cJr"><code>particle<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IParticle">IParticle</a></code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code>sender<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><span class="inlineDescription_17uy">-- <span>
+<p>The function to call when the subscription is published to.</p>
+</span></span></div></div><code>}</code></div><div></div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="IWormhole"><code style="text-decoration:none">IWormhole</code><a aria-hidden="true" class="hash-link" href="#IWormhole" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Types/IWormhole.lua#L23"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code class="purple__nFc">interface</code> <code>IWormhole<!-- --> <!-- -->{</code><div class="inset_2cJr"><div><code>_Storage<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Folder" target="_blank" rel="noopener noreferrer">Folder<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_17uy">-- <span>
+<p>The storage folder for Portal's RemoteEvents.</p>
+</span></span></div><div><code>_Contexts<!-- -->: </code><code class="op_1JtD">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IContext">IContext</a></code><code class="op_1JtD">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The Context managed by this Wormhole.</p>
+</span></span></div><div><code>Middleware<!-- -->: </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
+<p>The Middleware pipeline of this Wormhole.</p>
+</span></span></div></div><code>}</code></div><div></div><h2 class="anchor anchorWithStickyNavbar_31ik" id="properties">Properties<a aria-hidden="true" class="hash-link" href="#properties" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Wormhole"><code style="text-decoration:none">Wormhole</code><a aria-hidden="true" class="hash-link" href="#Wormhole" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/init.lua#L45"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Portal<!-- -->.<!-- -->Wormhole<!-- -->:<!-- --> </code> <code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IWormhole">IWormhole</a></code></div><div>
+<p>The Wormhole bound to this Portal.</p>
+</div><h2 class="anchor anchorWithStickyNavbar_31ik" id="functions">Functions<a aria-hidden="true" class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="new"><code style="text-decoration:none">new</code><a aria-hidden="true" class="hash-link" href="#new" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/init.lua#L54"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Portal<!-- -->.</code><code class="green_3LnD">new</code><code>(</code><div class="inset_2cJr"><div><code>middleware?<!-- -->: </code><code class="op_1JtD">{</code><code class="blue_2Afy">string</code><code class="op_1JtD">}</code><span class="inlineDescription_17uy">-- <span>
+<p>A list of middleware names to install with Portal.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal">Portal</a></code><span class="inlineDescription_17uy">-- <span>
+<p>a Portal instance.</p>
+</span></span></div><div>
+<p>Will instantiate a new Portal with the given middleware.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Context"><code style="text-decoration:none">Context</code><a aria-hidden="true" class="hash-link" href="#Context" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/init.lua#L69"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Portal<!-- -->:</code><code class="green_3LnD">Context</code><code>(</code><div class="inset_2cJr"><div><code>context<!-- -->: </code><code class="blue_2Afy">string</code><span class="inlineDescription_17uy">-- <span>
+<p>The name of the context to retrieve or make.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IContext">IContext</a></code><span class="inlineDescription_17uy">-- <span>
+<p>the <code>IContext</code> object with the given name.</p>
+</span></span></div><div>
+<p>Will retrieve an <code>IContext</code> from a given input string if it exists, or creates a new one otherwise.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Subscription"><code style="text-decoration:none">Subscription</code><a aria-hidden="true" class="hash-link" href="#Subscription" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/init.lua#L82"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Portal<!-- -->:</code><code class="green_3LnD">Subscription</code><code>(</code><div class="inset_2cJr"><div><code>context<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The name of the context to make a subscription to.</p>
+</span></span></div><div><code>action<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The action to make a subcription to.</p>
+</span></span></div><div><code>cb?<!-- -->: </code><code class="green_3LnD">(</code><div class="inset_2cJr"><code>particle<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IParticle">IParticle</a></code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code>target<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><span class="inlineDescription_17uy">-- <span>
+<p>The callback to run when the Context/Action is published to.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#ISubscription">ISubscription</a></code><span class="inlineDescription_17uy">-- <span>
+<p>the <code>ISubscription</code> object created.</p>
+</span></span></div><div>
+<p>Will make an <code>ISubscription</code> from given inputs.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Subscribe"><code style="text-decoration:none">Subscribe</code><a aria-hidden="true" class="hash-link" href="#Subscribe" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/init.lua#L100"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Portal<!-- -->:</code><code class="green_3LnD">Subscribe</code><code>(</code><div class="inset_2cJr"><div><code>sub<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#ISubscription">ISubscription</a></code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The subscription to subscribe with</p>
+</span></span></div><div><code>context<!-- -->: </code><code class="blue_2Afy">string?</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The name of the context to make a subscription to, to subscribe with.</p>
+</span></span></div><div><code>action<!-- -->: </code><code class="blue_2Afy">string?</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The action to subscribe to.</p>
+</span></span></div><div><code>cb<!-- -->: </code><code class="green_3LnD">(</code><div class="inset_2cJr"><code>particle<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IParticle">IParticle</a></code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code>target<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><span class="inlineDescription_17uy">-- <span>
+<p>The callback to run when the Context/Action is published to.</p>
+</span></span></div></div><code>) → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><span class="inlineDescription_17uy">-- <span>
+<p>The unsubscriber function used to disconnect the subscription from the RemoveEvent.</p>
+</span></span></div><div>
+<p>Used to retrieve the listener function and subscribe to a context for events when actions are dispatched. Can be made either with an existing ISubscription or from inputs to make a new one.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Publish"><code style="text-decoration:none">Publish</code><a aria-hidden="true" class="hash-link" href="#Publish" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/init.lua#L118"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Portal<!-- -->:</code><code class="green_3LnD">Publish</code><code>(</code><div class="inset_2cJr"><div><code>context<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The name of the context to publish to.</p>
+</span></span></div><div><code>action<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The action to publish to.</p>
+</span></span></div><div><code>data<!-- -->: </code><code class="op_1JtD">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="op_1JtD">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The data you are sending through the remote.</p>
+</span></span></div><div><code>target?<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_17uy">-- <span>
+<p>the target, or nil from the server, triggering the event.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Will initate the Publish sequence, transforming the data sent through the middleware pipeline, and eventually dispatching to the Context/Action RemoteEvent.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Warp"><code style="text-decoration:none">Warp</code><a aria-hidden="true" class="hash-link" href="#Warp" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/init.lua#L132"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Portal<!-- -->:</code><code class="green_3LnD">Warp</code><code>(</code><div class="inset_2cJr"><div><code>context<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IContext">IContext</a></code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The context to warp data through.</p>
+</span></span></div><div><code>action<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The action being targeted.</p>
+</span></span></div><div><code>data<!-- -->: </code><code class="op_1JtD">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="op_1JtD">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The data to warp (transform).</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IParticle">IParticle</a></code><span class="inlineDescription_17uy">-- <span>
+<p>All data sent through the middleware will return an IParticle object.</p>
+</span></span></div><div>
+<p>Will <code>Warp</code> (apply middleware to) the data you wish to transmit through the context/action.</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;new&quot;,
+            &quot;desc&quot;: &quot;Will instantiate a new Portal with the given middleware.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;middleware?&quot;,
+                    &quot;desc&quot;: &quot;A list of middleware names to install with Portal.&quot;,
+                    &quot;lua_type&quot;: &quot;{string}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;a Portal instance.&quot;,
+                    &quot;lua_type&quot;: &quot;Portal&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 54,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Context&quot;,
+            &quot;desc&quot;: &quot;Will retrieve an `IContext` from a given input string if it exists, or creates a new one otherwise.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;context&quot;,
+                    &quot;desc&quot;: &quot;The name of the context to retrieve or make.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;the `IContext` object with the given name.&quot;,
+                    &quot;lua_type&quot;: &quot;IContext&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 69,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Subscription&quot;,
+            &quot;desc&quot;: &quot;Will make an `ISubscription` from given inputs.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;context&quot;,
+                    &quot;desc&quot;: &quot;The name of the context to make a subscription to.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;action&quot;,
+                    &quot;desc&quot;: &quot;The action to make a subcription to.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;cb?&quot;,
+                    &quot;desc&quot;: &quot;The callback to run when the Context/Action is published to.&quot;,
+                    &quot;lua_type&quot;: &quot;(particle: IParticle, target: Player?) -&gt; ()&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;the `ISubscription` object created.&quot;,
+                    &quot;lua_type&quot;: &quot;ISubscription&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 82,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Subscribe&quot;,
+            &quot;desc&quot;: &quot;Used to retrieve the listener function and subscribe to a context for events when actions are dispatched. Can be made either with an existing ISubscription or from inputs to make a new one.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;sub&quot;,
+                    &quot;desc&quot;: &quot;The subscription to subscribe with&quot;,
+                    &quot;lua_type&quot;: &quot;ISubscription&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;context&quot;,
+                    &quot;desc&quot;: &quot;The name of the context to make a subscription to, to subscribe with.&quot;,
+                    &quot;lua_type&quot;: &quot;string?&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;action&quot;,
+                    &quot;desc&quot;: &quot;The action to subscribe to.&quot;,
+                    &quot;lua_type&quot;: &quot;string?&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;cb&quot;,
+                    &quot;desc&quot;: &quot;The callback to run when the Context/Action is published to.&quot;,
+                    &quot;lua_type&quot;: &quot;(particle: IParticle, target: Player?) -&gt; ()&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The unsubscriber function used to disconnect the subscription from the RemoveEvent.&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 100,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Publish&quot;,
+            &quot;desc&quot;: &quot;Will initate the Publish sequence, transforming the data sent through the middleware pipeline, and eventually dispatching to the Context/Action RemoteEvent.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;context&quot;,
+                    &quot;desc&quot;: &quot;The name of the context to publish to.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;action&quot;,
+                    &quot;desc&quot;: &quot;The action to publish to.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;data&quot;,
+                    &quot;desc&quot;: &quot;The data you are sending through the remote.&quot;,
+                    &quot;lua_type&quot;: &quot;{[string]: any}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;target?&quot;,
+                    &quot;desc&quot;: &quot;the target, or nil from the server, triggering the event.&quot;,
+                    &quot;lua_type&quot;: &quot;Player&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 118,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Warp&quot;,
+            &quot;desc&quot;: &quot;Will `Warp` (apply middleware to) the data you wish to transmit through the context/action.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;context&quot;,
+                    &quot;desc&quot;: &quot;The context to warp data through.&quot;,
+                    &quot;lua_type&quot;: &quot;IContext&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;action&quot;,
+                    &quot;desc&quot;: &quot;The action being targeted.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;data&quot;,
+                    &quot;desc&quot;: &quot;The data to warp (transform).&quot;,
+                    &quot;lua_type&quot;: &quot;{[string]: any}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;All data sent through the middleware will return an IParticle object.&quot;,
+                    &quot;lua_type&quot;: &quot;IParticle&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 132,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [
+        {
+            &quot;name&quot;: &quot;Wormhole&quot;,
+            &quot;desc&quot;: &quot;The Wormhole bound to this Portal.&quot;,
+            &quot;lua_type&quot;: &quot;IWormhole&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 45,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        }
+    ],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;IContext&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;Name&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;,
+                    &quot;desc&quot;: &quot;The Name of the Context.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Remote&quot;,
+                    &quot;lua_type&quot;: &quot;RemoteEvent&quot;,
+                    &quot;desc&quot;: &quot;The RemoteEvent this Context owns.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Actions&quot;,
+                    &quot;lua_type&quot;: &quot;{string}&quot;,
+                    &quot;desc&quot;: &quot;A list of actions that belong to this Context.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Subscriptions&quot;,
+                    &quot;lua_type&quot;: &quot;{[() -&gt; ()]: ISubscription}&quot;,
+                    &quot;desc&quot;: &quot;A dictionary of unsubscriber function for the keys and their associated Subscriptions as values.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 23,
+                &quot;path&quot;: &quot;src/Types/IContext.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;IParticle&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;Context&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;,
+                    &quot;desc&quot;: &quot;The Context this Particle was sent to.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Action&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;,
+                    &quot;desc&quot;: &quot;The Action this Particle was sent to.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Timestamp&quot;,
+                    &quot;lua_type&quot;: &quot;DateTime&quot;,
+                    &quot;desc&quot;: &quot;The Timestamp this Particle was sent at.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Payload&quot;,
+                    &quot;lua_type&quot;: &quot;{[string]: any}&quot;,
+                    &quot;desc&quot;: &quot;The Payload belonging to this Particle.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 18,
+                &quot;path&quot;: &quot;src/Types/IParticle.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;ISubscription&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;Context&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;,
+                    &quot;desc&quot;: &quot;The name of the context this subscription is for.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Action&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;,
+                    &quot;desc&quot;: &quot;The name of the action this subscription is listening to.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Callback&quot;,
+                    &quot;lua_type&quot;: &quot;(particle: IParticle, sender: Player?) -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;The function to call when the subscription is published to.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 19,
+                &quot;path&quot;: &quot;src/Types/ISubscription.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;IWormhole&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;_Storage&quot;,
+                    &quot;lua_type&quot;: &quot;Folder&quot;,
+                    &quot;desc&quot;: &quot;The storage folder for Portal&#x27;s RemoteEvents.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;_Contexts&quot;,
+                    &quot;lua_type&quot;: &quot;{[string]: IContext}&quot;,
+                    &quot;desc&quot;: &quot;The Context managed by this Wormhole.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Middleware&quot;,
+                    &quot;lua_type&quot;: &quot;any&quot;,
+                    &quot;desc&quot;: &quot;The Middleware pipeline of this Wormhole.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 23,
+                &quot;path&quot;: &quot;src/Types/IWormhole.lua&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;Portal&quot;,
+    &quot;desc&quot;: &quot;Portal is the gateway into the framework, it&#x27;s all you could need to use. The whole framework is exposed and documented such that developers can extend the functionality of Portal through middleware, or even also perhaps to help maintain the project in the future.&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 34,
+        &quot;path&quot;: &quot;src/init.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_35-E thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#IContext" class="table-of-contents__link toc-highlight">IContext</a></li><li><a href="#IParticle" class="table-of-contents__link toc-highlight">IParticle</a></li><li><a href="#ISubscription" class="table-of-contents__link toc-highlight">ISubscription</a></li><li><a href="#IWormhole" class="table-of-contents__link toc-highlight">IWormhole</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#Wormhole" class="table-of-contents__link toc-highlight">Wormhole</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Context" class="table-of-contents__link toc-highlight">:Context</a></li><li><a href="#Publish" class="table-of-contents__link toc-highlight">:Publish</a></li><li><a href="#Subscribe" class="table-of-contents__link toc-highlight">:Subscribe</a></li><li><a href="#Subscription" class="table-of-contents__link toc-highlight">:Subscription</a></li><li><a href="#Warp" class="table-of-contents__link toc-highlight">:Warp</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2021 ShaneButt. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/Portal/assets/js/runtime~main.d79643e9.js"></script>
+<script src="/Portal/assets/js/main.363356a8.js"></script>
+</body>
+</html>

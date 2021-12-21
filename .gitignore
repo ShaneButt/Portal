@@ -1,9 +1,0 @@
-# Project place file
-/portal.rbxlx
-
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
-
-/targets
-/Packages

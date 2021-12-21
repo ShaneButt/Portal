@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[798],{97868:function(s){s.exports=JSON.parse('{"sourceUrl":"https://www.github.com/ShaneButt/Portal/blob/main","baseUrl":"/Portal/","classOrder":[{"section":"Core","classes":["Portal","Wormhole","Context","Subscription"]},{"classes":["Middleware"]}],"apiCategories":[]}')}}]);

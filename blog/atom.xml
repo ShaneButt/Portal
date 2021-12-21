@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ShaneButt.github.io/Portal/blog</id>
+    <title>Portal Blog</title>
+    <updated>2021-12-20T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ShaneButt.github.io/Portal/blog"/>
+    <subtitle>Portal Blog</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Portal Release!]]></title>
+        <id>Portal Release!</id>
+        <link href="https://ShaneButt.github.io/Portal/blog/2021/12/20/portal-release"/>
+        <updated>2021-12-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As of today, Portal is available for public use; it's official. We're deciding to start things off at a comfortable version of 0.5.0-rc.1, the idea is to ensure everything works as intended and to fix things along the way and eventually make progress to 1.0.0 for the first stable release of Portal.]]></summary>
+        <content type="html"><![CDATA[<p>As of today, Portal is available for public use; it&#x27;s official. We&#x27;re deciding to start things off at a comfortable version of 0.5.0-rc.1, the idea is to ensure everything works as intended and to fix things along the way and eventually make progress to 1.0.0 for the first stable release of Portal.</p><p>As it stands, Portal&#x27;s API is pretty stable, I can&#x27;t see it changing much if at all before 1.0.0.</p><h2>Roadmap</h2><ul><li>Work with Portal and port Arvorian Industries gun scripts to use Portal instead of RemoteEvents.</li><li>Fix bugs during the porting of AI gun scripts.</li><li>Research and potentially provide RemoteFunction and Signal support.</li><li>Finish SimpleRodux and TypeCheck middleware.</li><li>Finish up the Demo place and include an example of defining Contexts.</li></ul><h2>Changes since 0.2.0-beta</h2><p>Boy, this is a long one. </p><ul><li><p>We have a <em>metric ton</em> of Luau type coverage improvements.</p></li><li><p>A boat-load of fixes and improvements to the Wormhole, Context, and Subscription classes.</p></li><li><p>Fleshed out Middleware &amp; support for custom middleware.</p></li><li><p>Runtime type-checking and improvements to Portal Types.</p></li><li><p>Fixes to front-facing API.</p></li><li><p>Source Docs &amp; auto-generated API docs using <a href="https://upliftgames.github.io/moonwave/docs/intro">Moonwave</a>.</p></li><li><p>Documentation for Installation, Usage, and more, built using Moonwave.</p></li><li><p>Published to Wally under <code>shanebutt/portal@0.5.0</code>.</p></li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Type Improvements!]]></title>
+        <id>Type Improvements!</id>
+        <link href="https://ShaneButt.github.io/Portal/blog/2021/12/10/type-coverage-improvements"/>
+        <updated>2021-12-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This update to Portal brings about a bunch of changes and redesign to the typing of Portal and its necessary parts.]]></summary>
+        <content type="html"><![CDATA[<p>This update to Portal brings about a bunch of changes and redesign to the typing of Portal and its necessary parts.</p><p>This blog post is currently being documented!</p>]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-beta.9">
+<link rel="alternate" type="application/rss+xml" href="/Portal/blog/rss.xml" title="Portal RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Portal/blog/atom.xml" title="Portal Atom Feed"><title data-react-helmet="true">Wormhole | Portal</title><meta data-react-helmet="true" property="og:title" content="Wormhole | Portal"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="description" content="If [Portal](/api/Portal) is the gateway into the framework, think of Wormhole as being the magic black box of the framework that handles the communication between the client and server."><meta data-react-helmet="true" property="og:description" content="If [Portal](/api/Portal) is the gateway into the framework, think of Wormhole as being the magic black box of the framework that handles the communication between the client and server."><meta data-react-helmet="true" property="og:url" content="https://ShaneButt.github.io/Portal/api/Wormhole"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_tag" content="default"><link data-react-helmet="true" rel="canonical" href="https://ShaneButt.github.io/Portal/api/Wormhole"><link data-react-helmet="true" rel="alternate" href="https://ShaneButt.github.io/Portal/api/Wormhole" hreflang="en"><link data-react-helmet="true" rel="alternate" href="https://ShaneButt.github.io/Portal/api/Wormhole" hreflang="x-default"><link rel="stylesheet" href="/Portal/assets/css/styles.04fec1dc.css">
+<link rel="preload" href="/Portal/assets/js/runtime~main.d79643e9.js" as="script">
+<link rel="preload" href="/Portal/assets/js/main.363356a8.js" as="script">
+</head>
+<body>
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div><a href="#" class="skipToContent_1oUP">Skip to main content</a></div><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Navigation bar toggle" class="navbar__toggle clean-btn" type="button" tabindex="0"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Portal/"><b class="navbar__title">Portal</b></a><a class="navbar__item navbar__link" href="/Portal/docs/intro">Docs</a><a class="navbar__item navbar__link" href="/Portal/blog">Blog</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Portal/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://www.github.com/ShaneButt/Portal" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link"><span>GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a><div class="toggle_71bT toggle_3Zt9 toggleDisabled_3cF-"><div class="toggleTrack_32Fl" role="button" tabindex="-1"><div class="toggleTrackCheck_3lV7"><span class="toggleIcon_O4iE">🌜</span></div><div class="toggleTrackX_S2yS"><span class="toggleIcon_O4iE">🌞</span></div><div class="toggleTrackThumb_xI_Z"></div></div><input type="checkbox" class="toggleScreenReader_28Tw" aria-label="Switch between dark and light mode"></div><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div class="main-wrapper docPageContainer_2Kz0"><div class="docPage_1bdk"><div class="docSidebarContainer_1ykS"><div class="sidebar_15mo"><nav class="menu thin-scrollbar menu_Bmed"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><a class="menu__link menu__link--sublist menu__link--active" href="#">Core</a><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Portal/api/Portal">​Portal</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Portal/api/Wormhole">​Wormhole</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Portal/api/Context">​Context</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Portal/api/Subscription">​Subscription</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Portal/api/Middleware">​Middleware</a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_1CGd"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_3E-R"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div><main class="docMainContainer_28N5"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_3WPG"><div class="docItemContainer_3XDu"><article><div class="member_qHIL markdown"><div class="tocCollapsible_1PrD theme-doc-toc-mobile tocMobile_3ryM"><button type="button" class="clean-btn tocCollapsibleButton_2O1e">On this page</button></div><header><h1 class="docTitle_1ddc" style="text-decoration:none"><span style="display:inline-block">Wormhole</span></h1><div class="luaClassTags_2Zrs"></div><div>
+<p>If <a href="/Portal/api/Portal">Portal</a> is the gateway into the framework, think of Wormhole as being the magic black box of the framework that handles the communication between the client and server.</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_31ik" id="properties">Properties<a aria-hidden="true" class="hash-link" href="#properties" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="_Storage"><code style="text-decoration:none">_Storage</code><a aria-hidden="true" class="hash-link" href="#_Storage" title="Direct link to heading">​</a></h3><span class="badge_3ZFo" style="color:#e74c3c"><span class="badgeTooltip_2qiw">This item is read only and cannot be modified.</span><span class="badgeToolTipTail_2yaQ"><svg xmlns="http://www.w3.org/2000/svg" height="300px" width="300px" fill="#e74c3c" x="0px" y="0px" viewBox="0 0 96 96"><path d="M70.354,15.662h-7.496H25.566c-3.282,0-5.19-0.776-5.728-1.169v-1.456c0.538-0.393,2.445-1.168,5.728-1.168h46.479V8H25.566  c-4.776,0-9.594,1.468-9.594,4.747v61.458C15.972,86.645,20.328,88,37.495,88h42.535V15.662H70.354z"></path></svg> <!-- -->Read Only</span></span><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L34"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.<!-- -->_Storage<!-- -->:<!-- --> </code> <code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Folder" target="_blank" rel="noopener noreferrer">Folder<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>The location of the Remote storage, <code>ReplicatedStorage.Portal</code>.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="_Contexts"><code style="text-decoration:none">_Contexts</code><a aria-hidden="true" class="hash-link" href="#_Contexts" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L41"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.<!-- -->_Contexts<!-- -->:<!-- --> </code> <code class="op_1JtD">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IContext">IContext</a></code><code class="op_1JtD">}</code></div><div>
+<p>A collection of Context objects managed by this Wormhole.</p>
+</div><h2 class="anchor anchorWithStickyNavbar_31ik" id="functions">Functions<a aria-hidden="true" class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="new"><code style="text-decoration:none">new</code><a aria-hidden="true" class="hash-link" href="#new" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L52"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.</code><code class="green_3LnD">new</code><code>(</code><div class="inset_2cJr"><div><code>middleware<!-- -->: </code><code class="op_1JtD">{</code><code class="blue_2Afy">string</code><code class="op_1JtD">}</code><span class="inlineDescription_17uy">-- <span>
+<p>A list of middleware - found in <code>Portal/Wormhole/Middleware</code> - to be used by the new Wormhole.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IWormhole">IWormhole</a></code><span class="inlineDescription_17uy">-- <span>
+<p>The new Wormhole.</p>
+</span></span></div><div>
+<p>Will instantiate a new Wormhole with the given list of middleware.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="like"><code style="text-decoration:none">like</code><a aria-hidden="true" class="hash-link" href="#like" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L66"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.</code><code class="green_3LnD">like</code><code>(</code><div class="inset_2cJr"><div><code>obj<!-- -->: </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
+<p>The object to compare.</p>
+</span></span></div></div><code>) → </code><code class="green_3LnD">(</code><div class="inset_2cJr"><code class="blue_2Afy">boolean</code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code class="blue_2Afy">string?</code></div><code class="green_3LnD">)</code><span class="inlineDescription_17uy">-- <span>
+<p><code>true</code> if IWormhole-like, <code>false</code> otherwise.</p>
+</span></span></div><div>
+<p>Compare an object to an IWormhole using a non-strict likeness type check.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="addContext"><code style="text-decoration:none">addContext</code><a aria-hidden="true" class="hash-link" href="#addContext" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L78"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.</code><code class="green_3LnD">addContext</code><code>(</code><div class="inset_2cJr"><div><code>wormhole<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IWormhole">IWormhole</a></code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The Wormhole being used.</p>
+</span></span></div><div><code>context<!-- -->: </code><code class="blue_2Afy">string</code><span class="inlineDescription_17uy">-- <span>
+<p>The name of the Context to find or make.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IContext">IContext</a></code><span class="inlineDescription_17uy">-- <span>
+<p>The Context object found or made.</p>
+</span></span></div><div>
+<p>Will either retrieve an existing Context, or insantiates a new one with the given name.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="makeSubscription"><code style="text-decoration:none">makeSubscription</code><a aria-hidden="true" class="hash-link" href="#makeSubscription" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L98"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.</code><code class="green_3LnD">makeSubscription</code><code>(</code><div class="inset_2cJr"><div><code>context<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The name of the Context to find or make.</p>
+</span></span></div><div><code>action<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The action to make a subscription to.</p>
+</span></span></div><div><code>callback?<!-- -->: </code><code class="green_3LnD">(</code><div class="inset_2cJr"><code>particle<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IParticle">IParticle</a></code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code>sender<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="blue_2Afy">?</code><span class="inlineDescription_17uy">-- <span>
+<p>The callback to attach to the subscription.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IContext">IContext</a></code><code class="op_1JtD">-</code><code class="blue_2Afy">The</code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Context">Context</a></code><code class="blue_2Afy">object</code><code class="blue_2Afy">found</code><code class="blue_2Afy">or</code><code class="blue_2Afy">made.</code></div><div>
+<p>Will make a new Subscription to the given Context-Action and attaches a callback to be run when the Context-Action receives data.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="subscribe"><code style="text-decoration:none">subscribe</code><a aria-hidden="true" class="hash-link" href="#subscribe" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L115"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.</code><code class="green_3LnD">subscribe</code><code>(</code><div class="inset_2cJr"><div><code>wormhole<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IWormhole">IWormhole</a></code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The Wormhole being used.</p>
+</span></span></div><div><code>subscription<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#ISubscription">ISubscription</a></code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The Subscription to subscribe to</p>
+</span></span></div><div><code>callback<!-- -->: </code><code class="green_3LnD">(</code><div class="inset_2cJr"><code>particle<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IParticle">IParticle</a></code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code>sender<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><span class="inlineDescription_17uy">-- <span>
+<p>The callback to run when the Context/Action is published to.</p>
+</span></span></div></div><code>) → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><span class="inlineDescription_17uy">-- <span>
+<p>The unsubscriber function, used to disconnect the connection to the RemoteEvent made by this subscriber.</p>
+</span></span></div><div>
+<p>Will subscribe to the given Subscription's Context and</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="applyMiddleware"><code style="text-decoration:none">applyMiddleware</code><a aria-hidden="true" class="hash-link" href="#applyMiddleware" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L135"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.</code><code class="green_3LnD">applyMiddleware</code><code>(</code><div class="inset_2cJr"><div><code>wormhole<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IWormhole">IWormhole</a></code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The Wormhole being used.</p>
+</span></span></div><div><code>portal<!-- -->: </code><code class="op_1JtD">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="blue_2Afy">string</code><code class="op_1JtD">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>A dictionary with two fields: Context and Action, which are the names of the Context-Action being targeted.</p>
+</span></span></div><div><code>data<!-- -->: </code><code class="op_1JtD">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="op_1JtD">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The data to feed through the middleware.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IParticle">IParticle</a></code><span class="inlineDescription_17uy">-- <span>
+<p>The particle made using the data sent produced by the final middleware step, <a href="/Portal/api/ChargeParticle">ChargeParticle</a>.</p>
+</span></span></div><div>
+<p>Will run data through the given Wormhole's middleware, transforming the data into an <a href="/Portal/api/Portal#IParticle">IParticle</a>.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="dispatch"><code style="text-decoration:none">dispatch</code><a aria-hidden="true" class="hash-link" href="#dispatch" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://www.github.com/ShaneButt/Portal/blob/main/src/Wormhole/init.lua#L150"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Wormhole<!-- -->.</code><code class="green_3LnD">dispatch</code><code>(</code><div class="inset_2cJr"><div><code>wormhole<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IWormhole">IWormhole</a></code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The Wormhole being used.</p>
+</span></span></div><div><code>context<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/Portal/api/Portal#IContext">IContext</a></code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The Context object to publish to.</p>
+</span></span></div><div><code>action<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The action to action to dispatch to.</p>
+</span></span></div><div><code>data<!-- -->: </code><code class="op_1JtD">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="op_1JtD">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The data you are sending through the Wormhole</p>
+</span></span></div><div><code>target?<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_17uy">-- <span>
+<p>The player recieving this data, or all clients (if performed on the server and nil). If performed on the client will be received by the server if not specified.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Dispatches data to the given Context-Action through transforming the data through the middleware and eventually Publishing to the Context.</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;new&quot;,
+            &quot;desc&quot;: &quot;Will instantiate a new Wormhole with the given list of middleware.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;middleware&quot;,
+                    &quot;desc&quot;: &quot;A list of middleware - found in `Portal/Wormhole/Middleware` - to be used by the new Wormhole.&quot;,
+                    &quot;lua_type&quot;: &quot;{string}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The new Wormhole.&quot;,
+                    &quot;lua_type&quot;: &quot;IWormhole&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 52,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;like&quot;,
+            &quot;desc&quot;: &quot;Compare an object to an IWormhole using a non-strict likeness type check.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;obj&quot;,
+                    &quot;desc&quot;: &quot;The object to compare.&quot;,
+                    &quot;lua_type&quot;: &quot;any&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;`true` if IWormhole-like, `false` otherwise.&quot;,
+                    &quot;lua_type&quot;: &quot;(boolean, string?)&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 66,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;addContext&quot;,
+            &quot;desc&quot;: &quot;Will either retrieve an existing Context, or insantiates a new one with the given name.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;wormhole&quot;,
+                    &quot;desc&quot;: &quot;The Wormhole being used.&quot;,
+                    &quot;lua_type&quot;: &quot;IWormhole&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;context&quot;,
+                    &quot;desc&quot;: &quot;The name of the Context to find or make.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The Context object found or made.&quot;,
+                    &quot;lua_type&quot;: &quot;IContext&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 78,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;makeSubscription&quot;,
+            &quot;desc&quot;: &quot;Will make a new Subscription to the given Context-Action and attaches a callback to be run when the Context-Action receives data.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;context&quot;,
+                    &quot;desc&quot;: &quot;The name of the Context to find or make.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;action&quot;,
+                    &quot;desc&quot;: &quot;The action to make a subscription to.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;callback?&quot;,
+                    &quot;desc&quot;: &quot;The callback to attach to the subscription.&quot;,
+                    &quot;lua_type&quot;: &quot;(particle: IParticle, sender: Player?) -&gt; ()?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;IContext - The Context object found or made.&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 98,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;subscribe&quot;,
+            &quot;desc&quot;: &quot;Will subscribe to the given Subscription&#x27;s Context and &quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;wormhole&quot;,
+                    &quot;desc&quot;: &quot;The Wormhole being used.&quot;,
+                    &quot;lua_type&quot;: &quot;IWormhole&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;subscription&quot;,
+                    &quot;desc&quot;: &quot;The Subscription to subscribe to&quot;,
+                    &quot;lua_type&quot;: &quot;ISubscription&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;callback&quot;,
+                    &quot;desc&quot;: &quot;The callback to run when the Context/Action is published to.&quot;,
+                    &quot;lua_type&quot;: &quot;(particle: IParticle, sender: Player?) -&gt; ()&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The unsubscriber function, used to disconnect the connection to the RemoteEvent made by this subscriber.&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 115,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;applyMiddleware&quot;,
+            &quot;desc&quot;: &quot;Will run data through the given Wormhole&#x27;s middleware, transforming the data into an [IParticle](/api/Portal#IParticle).&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;wormhole&quot;,
+                    &quot;desc&quot;: &quot;The Wormhole being used.&quot;,
+                    &quot;lua_type&quot;: &quot;IWormhole&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;portal&quot;,
+                    &quot;desc&quot;: &quot;A dictionary with two fields: Context and Action, which are the names of the Context-Action being targeted.&quot;,
+                    &quot;lua_type&quot;: &quot;{[string]: string}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;data&quot;,
+                    &quot;desc&quot;: &quot;The data to feed through the middleware.&quot;,
+                    &quot;lua_type&quot;: &quot;{[string]: any}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The particle made using the data sent produced by the final middleware step, [ChargeParticle](/api/ChargeParticle).&quot;,
+                    &quot;lua_type&quot;: &quot;IParticle&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 135,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;dispatch&quot;,
+            &quot;desc&quot;: &quot;Dispatches data to the given Context-Action through transforming the data through the middleware and eventually Publishing to the Context.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;wormhole&quot;,
+                    &quot;desc&quot;: &quot;The Wormhole being used.&quot;,
+                    &quot;lua_type&quot;: &quot;IWormhole&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;context&quot;,
+                    &quot;desc&quot;: &quot;The Context object to publish to.&quot;,
+                    &quot;lua_type&quot;: &quot;IContext&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;action&quot;,
+                    &quot;desc&quot;: &quot;The action to action to dispatch to.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;data&quot;,
+                    &quot;desc&quot;: &quot;The data you are sending through the Wormhole&quot;,
+                    &quot;lua_type&quot;: &quot;{[string]: any}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;target?&quot;,
+                    &quot;desc&quot;: &quot;The player recieving this data, or all clients (if performed on the server and nil). If performed on the client will be received by the server if not specified.&quot;,
+                    &quot;lua_type&quot;: &quot;Player&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 150,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [
+        {
+            &quot;name&quot;: &quot;_Storage&quot;,
+            &quot;desc&quot;: &quot;The location of the Remote storage, `ReplicatedStorage.Portal`.&quot;,
+            &quot;lua_type&quot;: &quot;Folder&quot;,
+            &quot;readonly&quot;: true,
+            &quot;source&quot;: {
+                &quot;line&quot;: 34,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;_Contexts&quot;,
+            &quot;desc&quot;: &quot;A collection of Context objects managed by this Wormhole.&quot;,
+            &quot;lua_type&quot;: &quot;{[string]: IContext}&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 41,
+                &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+            }
+        }
+    ],
+    &quot;types&quot;: [],
+    &quot;name&quot;: &quot;Wormhole&quot;,
+    &quot;desc&quot;: &quot;If [Portal](/api/Portal) is the gateway into the framework, think of Wormhole as being the magic black box of the framework that handles the communication between the client and server.&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 26,
+        &quot;path&quot;: &quot;src/Wormhole/init.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_35-E thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#_Contexts" class="table-of-contents__link toc-highlight">_Contexts</a></li><li><a href="#_Storage" class="table-of-contents__link toc-highlight">_Storage</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#addContext" class="table-of-contents__link toc-highlight">.addContext</a></li><li><a href="#applyMiddleware" class="table-of-contents__link toc-highlight">.applyMiddleware</a></li><li><a href="#dispatch" class="table-of-contents__link toc-highlight">.dispatch</a></li><li><a href="#like" class="table-of-contents__link toc-highlight">.like</a></li><li><a href="#makeSubscription" class="table-of-contents__link toc-highlight">.makeSubscription</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li><li><a href="#subscribe" class="table-of-contents__link toc-highlight">.subscribe</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2021 ShaneButt. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/Portal/assets/js/runtime~main.d79643e9.js"></script>
+<script src="/Portal/assets/js/main.363356a8.js"></script>
+</body>
+</html>
